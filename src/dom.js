@@ -43,4 +43,4 @@ function createElement(fiber) {
 	return dom;
 }
 
-export { updateElement };
+export { updateElement, createElement };
