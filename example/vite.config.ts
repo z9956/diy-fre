@@ -4,9 +4,9 @@ export default {
 		jsxFactory: 'h',
 		jsxFragment: 'Fragment',
 		target: 'es2020',
-		format: 'esm'
+		format: 'esm',
 	},
 	server: {
-		port: 3333
-	}
-}
+		port: 3333,
+	},
+};
