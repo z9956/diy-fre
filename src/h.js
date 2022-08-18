@@ -26,3 +26,7 @@ export function h(type, attrs) {
 export function createText(vnode) {
 	return { type: 'text', props: { nodeValue: vnode } };
 }
+
+export function Fragment(props) {
+	return props.children;
+}

@@ -1,10 +1,8 @@
-import { STYLE, TEXT } from './constant';
-
 const isEvent = (key) => key.startsWith('on');
 const isNew = (prev, next) => (key) => prev[key] !== next[key];
 
 function updateProperty(dom, name, value, newValue) {
-	if (name === STYLE) {
+	if (name === 'style') {
 		for (let key in value) {
 			if (!newValue[key]) dom[name][key] = '';
 		}
@@ -36,7 +34,7 @@ function updateElement(dom, props, newProps) {
 //对应createDom
 function createElement(fiber) {
 	//TODO SVG
-	const dom = fiber.type === TEXT ? document.createTextNode('') : document.createElement(fiber.type);
+	const dom = fiber.type === 'text' ? document.createTextNode('') : document.createElement(fiber.type);
 
 	updateElement(dom, [], fiber.props);
 
